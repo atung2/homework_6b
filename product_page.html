@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Bombay Pillow Product Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css"/>
+        <script src="js.js"></script>
+    </head>
+    <body  onload="displayCartNumber()">
+        
+        
+        
+          
+            <div class="hero-container">
+               <div class="hero-left">
+                <div class="navbar">
+                    <nav>
+                        <a href="./index.html" class="nav-item">home</a>
+                        <a href="./product_browse_page.html" class="highlighted-text">shop</a>
+                        <a href="#" id="about">about</a>
+                    </nav>
+                    <a href="./product_browse_page.html"><img class="logo" src="assets/fluff stuff.png" alt="alt"/></a>
+                </div>
+                <div id="back-button-product-image">
+                    <a href="./product_browse_page.html"><img id="back-button" src="assets/Back Button.png" alt="alt"/></a>
+                    <img id='product-image' src="assets/bombay.jpg" alt="alt"/>
+                </div>
+               </div>
+           <div class='hero-right'>
+                <div class="top-right">
+
+                        <img class='icon-nav-left' src="assets/profile-icon.png" alt=""/>    
+                        <a href="./cart.html"><img onclick="openCart()" id='shopping-cart' class='icon-nav-left' src="assets/shoppingcart.png" alt=""/></a>
+                        <img id='shopping-cart-number' src='assets/1.png' alt=''>
+
+                </div>
+               
+                <div id="product-details-container">
+                     
+                    <div id="product-details-right">
+                        <h2 id="pillow-category">Bed Pillows - </h2>
+                        <h1 class="heading-no-margin" id="productName">Bombay Pillow</h1>
+                        <div class="product-rating-price">
+                            <p class="open-sans-24px">$50.00</p>
+                            <img id="star-rating" src="assets/star-rating.png" alt="alt"/>
+                            <p class="open-sans-14px">452 ratings</p>
+                        </div>
+                        <div class="color-material">
+                            <div class="color-selector">
+                                <form name="form1">
+                                    <p class="dropdowns">Color:</p> <!--interactive-->
+                                    
+                                    <input type="radio" id="SchoolSpecial" name="color" value="0" checked onclick='displayPicture(this)'>
+                                        <label for="SchoolSpecial">School Special</label><br>
+                                    
+                                    <input type="radio" id="MorningHaze" name="color" value="1" onclick='displayPicture(this)'>
+                                        <label for="MorningHaze">Morning Haze</label><br>
+                                    
+                                    <input type="radio" id="CozyDenim" name="color" value="2" onclick='displayPicture(this)'>
+                                        <label for="CozyDenim">Cozy Denim</label><br>
+                                    
+                                    <input type="radio" id="RainyDay" name="color" value="3" onclick='displayPicture(this)'>
+                                        <label for="RainyDay">Rainy Day</label><br>
+                                </form>
+                            </div>
+                            
+                            <div class="color-selector">
+                                 <form name='form2'>
+                                    <p class='dropdowns'>Material:</p>
+                                    
+                                    <input type="radio" id="DuckDown" name="material" value="5" checked>
+                                        <label for="DuckDown" id="label5">Duck Down</label><br>
+                                        
+                                    <input type="radio" id="Hypoallergenic" name="material" value="6">
+                                        <label for="Hypoallergenic">Hypoallergenic Blend</label><br>  
+                                        
+                                    <input type="radio" id="MorningFoam" name="material" value="7">
+                                        <label for="MorningFoam">Morning Foam</label><br>
+                                  </form>
+                            </div>
+                            <!-- <p class="dropdowns">Color:</p>
+                            <img class="dropdown-sizing" src="assets/color-dropdown.png" alt='alt'/>
+                            <p class="dropdowns-materials">Material:</p>
+                            <img class="dropdown-sizing" src="assets/material-dropdown.png" alt='alt'/> -->
+
+                        </div>
+
+                        <div id="detail-container">
+                            <div id="toggle-detail-menu">
+                                <span id="selected-detail"><strong>Details</strong></span>
+                                <span class="detail-section">Care</span>
+                                <span class="detail-section">FAQ</span>
+                            </div>
+
+                            <div id="details-paragraph">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                    ut aliquip ex commodo consequat. Duis aute irure dolor in reprehenderit 
+                                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                    Excepteur sint occaecat cupidatat non proident
+                                </p>
+                            </div>
+
+                            <div id="button-container">
+                                 <div class='cart-quantity'> <!--interactive-->
+                                    <p class='playfair-16px'>Quantity:</p>
+                                    <div class='adjust'>
+                                        <div class='remove' onclick="removeQuantity()"><p><strong>-</strong></p></div>
+                                        <p id
+                                           ='counter'>1</p>
+                                        <div class='add' onclick="addQuantity()"><p><strong>+</strong></p></div>  
+                                    </div>
+                                </div>
+                                <button onclick="displayCartNumber(); runIt(); newCartItem()">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+           
+        <div id="you-might-also-like">
+                <h1 class="YMAL">You Might Also Like</h1>
+                <div class="row-container">
+                    <div class="item-row">
+                        <div class="item-card-2">
+                            <img class="thumbnail-image" src="assets/cloud pillow.jpg" alt="alt" />
+                            <p class="Playfair-16px-white">Cloud Pillow</p>
+                            <div class="price-stars">
+                                <p class="open-sans-20px-white">$20.00</p>
+                                <img class="star-rating-white" src="assets/star-rating-white.png" alt="alt"/>
+                            </div>
+                        </div>
+
+                        <div class="item-card">
+                            <img  class="thumbnail-image" src="assets/enjoy today.jpg" alt="alt" />
+                            <p class="Playfair-16px-white">Enjoy Today Pillow</p>
+                            <div class="price-stars">
+                                <p class="open-sans-20px-white">$20.00</p>
+                                <img class="star-rating-white" src="assets/star-rating-white.png" alt="alt"/>
+                            </div>
+                        </div>
+
+                        <div class="item-card">
+                            <img  class="thumbnail-image" src="assets/silk linen.jpg" alt="alt" />
+                            <p class="Playfair-16px-white">Silk Linen Couch Pillow</p>
+                            <div class="price-stars">
+                                <p class="open-sans-20px-white">$20.00</p>
+                                <img  class="star-rating-white" src="assets/star-rating-white.png" alt="alt"/>
+                            </div>
+                        </div>
+
+                        <div class="item-card-3">
+                            <img  class="thumbnail-image" src="assets/couch throw.jpg" alt="alt" />
+                            <p class="Playfair-16px-white">Couch Throw Pillow</p>
+                            <div class="price-stars">
+                                <p class="open-sans-20px-white">$20.00</p>
+                                <img  class="star-rating-white" src="assets/star-rating-white.png" alt="alt"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        
+            <div class="footer">
+                <div class="menu-container">
+                    <div class="menu">
+                        <h2 class="h2-footer">More Info</h2>
+                        <div class="menu-items">
+                            <p>Contact Us</p>
+                            <p>Privacy Policy</p>
+                            <p>Shipping & Returns</p>
+                            <p>Terms and Conditions</p>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <h2 class="h2-footer">Menu</h2>
+                        <div class="menu-items">
+                            <p>Home</p>
+                            <p>Shop</p>
+                            <p>About</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+                
+    <!--    <div id='overlay'>
+            <div class='hero-left'></div>
+            <div class='hero-right'>
+                <div class='cart-container'>
+                    <h1>Cart</h1>
+                    <div class='product-details-cart'>
+                        <img class='cart-thumbnail' src='assets/bombay.jpg' alt=''/>
+                        <div class='item-cart'>
+                            <div class='cart-first-line'>
+                                <p class='playfair-16px'><strong>Bombay Pillow</strong></p>
+                                <img class='cancel-item-cart' src='assets/cancel.png' alt=''/>
+                            </div>
+                            <div class='cart-second-line'>
+                               <div class="product-rating-price">
+                                <p class="dropdowns">Color:</p>
+                                <img class="dropdown-sizing-cart" src="assets/color-no-arrow.png" alt='alt'/>
+                                <p class="dropdowns-materials-cart">Material:</p>
+                                <img class="dropdown-sizing-cart" src="assets/material-no-arrow.png" alt='alt'/>
+                            </div>
+                            </div>
+                            <div class='cart-third-line'>
+                                <div class='cart-quantity'>
+                                    <p class='playfair-16px'>Quantity:</p>
+                                    <div class='adjust'>
+                                        <div class='remove' onclick="removeQuantity()"><p><strong>-</strong></p></div>
+                                        <p id="counter">1</p>
+                                        <div class='add' onclick="addQuantity()"><p><strong>+</strong></p></div>  
+                                    </div>
+                                </div>
+                                <div id='cart-price'><p id='cart-price-text'>$50.00</p></div>
+                            </div>
+                        </div>
+            </div>
+            </div>
+                
+            </div>
+        </div> -->
+    </body>
+</html>
