@@ -66,26 +66,26 @@ function displayPicture(box){
         
         
 //Change the Number in Cart
-function displayCartNumber() {
-    var condition = JSON.parse(localStorage.getItem('savedCart')).length;
-    console.log(condition);
-    if (condition === 0) {
-       document.getElementById('shopping-cart-number').style.display='none';
-    }
-    if (condition === 1) {
-    document.getElementById('shopping-cart-number').src="assets/1.png";
-    }
-    if (condition===2) {
-        document.getElementById('shopping-cart-number').src="assets/2.png";
-    }
-    if (condition===3) {
-        document.getElementById('shopping-cart-number').src="assets/3.png";
-    }
-    if (condition===4) {
-        document.getElementById('shopping-cart-number').src="assets/more.png";
-    }
-    document.getElementById('shopping-cart-number').style.display='block';
-}
+// function displayCartNumber() {
+//     var condition = JSON.parse(localStorage.getItem('savedCart')).length;
+//     console.log(condition);
+//     if (condition === 0) {
+//        document.getElementById('shopping-cart-number').style.display='none';
+//     }
+//     if (condition === 1) {
+//     document.getElementById('shopping-cart-number').src="assets/1.png";
+//     }
+//     if (condition===2) {
+//         document.getElementById('shopping-cart-number').src="assets/2.png";
+//     }
+//     if (condition===3) {
+//         document.getElementById('shopping-cart-number').src="assets/3.png";
+//     }
+//     if (condition===4) {
+//         document.getElementById('shopping-cart-number').src="assets/more.png";
+//     }
+//     document.getElementById('shopping-cart-number').style.display='block';
+// }
 
 
 
